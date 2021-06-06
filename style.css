@@ -1,0 +1,345 @@
+@import "reset.css";
+@keyframes fadeHeler {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: linear-gradient(151.49deg, #f81c52 1.95%, #d6002f 97.85%);
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  max-width: clamp(32rem, 555.5555555556vw, 800rem);
+  margin: 0 auto;
+  padding: clamp(1rem, 1.7361111111vw, 2.5rem);
+}
+
+h1 {
+  color: #e6e6e6;
+  font-size: clamp(1.5rem, 3.4722222222vw, 5rem);
+  line-height: 115%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-height: 800px) {
+  h1 {
+    font-size: clamp(1.5rem, 2.0833333333vw, 3rem);
+  }
+}
+h1 span {
+  opacity: 0;
+  animation: fadeHeler 1s forwards 1s;
+}
+h1 span:nth-child(2) {
+  animation-delay: 1.5s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 2s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 2.5s;
+  font-size: 50%;
+  padding-top: clamp(1.5rem, 1.3888888889vw, 2rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.125vw, 4.5rem);
+  opacity: 0.75;
+  mix-blend-mode: darken;
+  padding: clamp(1.5rem, 1.7361111111vw, 2.5rem) 0 0;
+}
+
+.qr {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeHeler 1s forwards 0.5s;
+}
+@media (max-height: 700px) {
+  .qr {
+    transform: scale(0.5);
+    margin-bottom: -150px;
+    transform-origin: top center;
+  }
+}
+
+h3 {
+  font-size: clamp(1rem, 1.25vw, 1.8rem);
+  color: #fff;
+}
+
+@keyframes qr {
+  0% {
+    transform: scale(1);
+  }
+  1% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(0.5) rotate(45);
+  }
+  10% {
+    transform: scale(0.1) rotate(-90deg);
+  }
+  15% {
+    transform: scale(0.5) skewX(20deg) translate(-500%, 220%);
+  }
+  20% {
+    transform: scale(0.1) skewX(-20deg) translate(500%, 50%);
+  }
+  25% {
+    transform: scale(0.75) translate(-500%, 900%);
+  }
+  30% {
+    transform: scale(5);
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+    transform: scale(0) translate(200%, 350%);
+  }
+  45% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg) scale(0.25) translate(-500%, 50%);
+  }
+  55% {
+    transform: rotate(90deg) scale(0.33) translate(-25%, 10%);
+  }
+  60% {
+    transform: rotate(-90deg) scale(1) translate(50%, 500%);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(180deg) scale(5) translate(100%, -100%);
+  }
+  75% {
+    transform: rotate(45deg) scale(0) translate(200%, 100%);
+  }
+  85% {
+    transform: rotate(0) scale(0.25) skewX(33deg);
+  }
+  90% {
+    transform: rotate(360) scale(3) skew(0);
+  }
+  95% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(0) rotate(720);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+img {
+  object-fit: contain;
+  position: relative;
+  transform: none;
+  border-radius: clamp(1rem, 0.6944444444vw, 1rem);
+  box-shadow: 0 clamp(1rem, 1.3888888889vw, 2rem) clamp(1.5rem, 2.0833333333vw, 3rem) rgba(0, 0, 0, 0.25);
+  animation: qr 10s forwards 8s;
+  transform-origin: center;
+}
+
+i {
+  opacity: 0.8;
+}
+
+@keyframes countDown {
+  0% {
+    content: "15";
+  }
+  100% {
+    content: "0";
+  }
+  6.66% {
+    content: "14";
+  }
+  100% {
+    content: "0";
+  }
+  13.32% {
+    content: "13";
+  }
+  100% {
+    content: "0";
+  }
+  19.98% {
+    content: "12";
+  }
+  100% {
+    content: "0";
+  }
+  26.64% {
+    content: "11";
+  }
+  100% {
+    content: "0";
+  }
+  33.3% {
+    content: "10";
+  }
+  100% {
+    content: "0";
+  }
+  39.96% {
+    content: "9";
+  }
+  100% {
+    content: "0";
+  }
+  46.62% {
+    content: "8";
+  }
+  100% {
+    content: "0";
+  }
+  53.28% {
+    content: "7";
+  }
+  100% {
+    content: "0";
+  }
+  59.94% {
+    content: "6";
+  }
+  100% {
+    content: "0";
+  }
+  66.6% {
+    content: "5";
+  }
+  100% {
+    content: "0";
+  }
+  73.26% {
+    content: "4";
+  }
+  100% {
+    content: "0";
+  }
+  79.92% {
+    content: "3";
+  }
+  100% {
+    content: "0";
+  }
+  86.58% {
+    content: "2";
+  }
+  100% {
+    content: "0";
+  }
+  93.24% {
+    content: "1";
+  }
+  100% {
+    content: "0";
+  }
+  99.9% {
+    content: "0";
+  }
+  100% {
+    content: "0";
+  }
+}
+u {
+  display: inline-block;
+}
+u:before {
+  content: "15";
+  animation: countDown 15s forwards 3s;
+}
+
+a {
+  color: #fff;
+  font-size: clamp(1rem, 1.25vw, 1.8rem);
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75);
+  color: #000;
+  height: clamp(4rem, 4.1666666667vw, 6rem);
+  border-radius: clamp(1rem, 0.6944444444vw, 1rem);
+  padding: 0 clamp(1.5rem, 2.7777777778vw, 4rem);
+  color: #fff;
+  box-shadow: 0 clamp(1rem, 1.3888888889vw, 2rem) clamp(1.5rem, 2.0833333333vw, 3rem) rgba(0, 0, 0, 0.15);
+  background: linear-gradient(-151.49deg, #f81c52 99%, #d6002f 1%);
+  transition: all 250ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+a span {
+  position: relative;
+  z-index: 1;
+}
+a:before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #fff;
+  transition: all 250ms ease-in-out;
+  display: block;
+  content: "";
+  opacity: 0;
+}
+a:hover {
+  transform: scale(1.1);
+  color: #ff0000;
+}
+a:hover:before {
+  opacity: 1;
+}
+
+.helper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeHeler 1s forwards 18s;
+}
+.helper h3 {
+  margin-bottom: clamp(1rem, 1.0416666667vw, 1.5rem);
+  opacity: 0;
+  animation: fadeHeler 1s forwards 18.5s;
+}
+.helper a {
+  opacity: 0;
+  animation: fadeHeler 1s forwards 19.5s;
+}
